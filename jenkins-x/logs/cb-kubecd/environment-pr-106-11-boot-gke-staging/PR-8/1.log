@@ -1,0 +1,25 @@
+
+Showing logs for build [32mcb-kubecd-environment-pr-106-11-r55hb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-9bbrn[0m
+{"level":"warn","ts":1576029427.1676319,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1576029427.1690166,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-environment-pr-106-11-r55hb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-tr6wq[0m
+{"level":"warn","ts":1576029428.0543046,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1576029428.0708194,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mcb-kubecd-environment-pr-106-11-r55hb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-environment-pr-106-11-r55hb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-environment-pr-106-11-zkf96[0m
+{"level":"warn","ts":1576029435.359008,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1576029436.8363166,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/cb-kubecd/environment-pr-106-11-boot-gke-dev.git @ v0.0.8 in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-environment-pr-106-11-r55hb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:1fc7432591df9336b583568fa29db775b52a5e92,8:eef9f8c08ef184cfbd9352ef5fd81b3f57eaeee3
+DEBUG: ran git remote update in 
+DEBUG: ran git fetch origin eef9f8c08ef184cfbd9352ef5fd81b3f57eaeee3: 1fc7432591df9336b583568fa29db775b52a5e92: in 
+Converted  to an unshallow repository
+DEBUG: Unshallowed git repo in 
+DEBUG: ran git checkout master in 
+error: error during merge: resetting master to 1fc7432591df9336b583568fa29db775b52a5e92: git output: fatal: Could not parse object '1fc7432591df9336b583568fa29db775b52a5e92'.: failed to run 'git reset --hard 1fc7432591df9336b583568fa29db775b52a5e92' command in directory '', output: 'fatal: Could not parse object '1fc7432591df9336b583568fa29db775b52a5e92'.'
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-git-merge'. The execution of the pipeline has stopped.[0m
